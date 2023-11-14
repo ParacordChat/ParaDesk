@@ -17,12 +17,12 @@ for folder in ./*; do
     hash=$(echo "$folder" | md5sum | cut -d' ' -f1)
 
     # #compress and add comment with hash
-    # zip -r "./$(basename "$folder").zip" "$folder"
+    zip -r "./$(basename "$folder").zip" "$folder"
 
     # add hash to sums.nfo
     echo " - $folder - $hash" >> sums.nfo
 
-    # rm -rf "$folder"
+    rm -rf "$folder"
 done
 
 cd ../../
