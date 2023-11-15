@@ -7,10 +7,6 @@ cd build/bin/
 
 rm -rf *.zip
 
-mv Paracord-darwin-x64/Paracord.app ./Paracord-mac-intel.app
-mv Paracord-darwin-arm64/Paracord.app ./Paracord-mac-m1.app
-rm -rf Paracord-darwin-*
-
 touch sums.nfo
 echo "Sums:" >> sums.nfo
 
